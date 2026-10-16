@@ -32,3 +32,11 @@ Longer times are displayed in seconds (s), shorter times in milliseconds (ms). C
 All timings assume a quarter-note BPM. One beat means one quarter note; the beats-per-bar control changes bar lengths.
 
 Reverb timings are starting points. The custom calculator subtracts pre-delay from the chosen total length, but real reverb tails fade gradually. A plugin's decay control may describe RT60 rather than an exact tail end, so listen and adjust to suit the track.
+
+## Smoke tests
+
+With Node.js 22 or newer, run `node --test tests/*.test.cjs`. No install or build step is needed.
+
+The checks run the unchanged `app.js` in a small DOM adapter using the page's IDs and control defaults. They cover timing maths, BPM validation, delay/Hz and reverb output, tempo controls, tap tempo with a controlled clock, clipboard success/failure handlers, saved tempo and storage failures, and tab click/keyboard handlers (including visibility, ARIA state and focus requests).
+
+This is not a browser test: native number-input sanitization, actual clipboard permissions/writes, persistent browser storage, real focus movement and keyboard event delivery, screen-reader announcements, layout, styling and GitHub Pages delivery still need manual browser checks.
