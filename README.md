@@ -40,3 +40,7 @@ With Node.js 22 or newer, run `node --test tests/*.test.cjs`. No install or buil
 The checks run the unchanged `app.js` in a small DOM adapter using the page's IDs and control defaults. They cover timing maths, BPM validation, delay/Hz and reverb output, tempo controls, tap tempo with a controlled clock, clipboard success/failure handlers, saved tempo and storage failures, and tab click/keyboard handlers (including visibility, ARIA state and focus requests).
 
 This is not a browser test: native number-input sanitization, actual clipboard permissions/writes, persistent browser storage, real focus movement and keyboard event delivery, screen-reader announcements, layout, styling and GitHub Pages delivery still need manual browser checks.
+
+## Page views
+
+A small [Hits counter](https://hits.sh/onemanzoo.github.io/tempo-time-calculator/) in the live page footer records approximate page views from its installation on 16 October 2026. It needs no account or JavaScript. This is a public badge-request count, not unique visitors: repeat visits, bots and testing can increase it, while caching and blockers can miss views. Earlier visits are not recovered. The badge sends no referrer; the provider states that the counter uses no cookies and collects no personal data ([privacy policy](https://hits.sh/privacy/)). If the service is blocked or unavailable, the calculator still works.
